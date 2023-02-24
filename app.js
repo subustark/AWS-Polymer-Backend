@@ -9,22 +9,22 @@ const tagsRoutes=require("./Routes/tags.routes");
 (async()=>{
 try{
     await mongo.connect()
- app.use(cors())
+   app.use(cors())
 
-app.use(express.json())
+   app.use(express.json())
 
- app.use("/repo",repoRoutes)
+   app.use("/repo",repoRoutes)
 
-  app.use("/tags",tagsRoutes)
+   app.use("/tags",tagsRoutes)
 
-  app.get('/', function(req, res, next) {
-    res.send('AWS Polymer Search Clone Server Running Sucessfully');
+   app.get('/', function(req, res, next) {
+    res.send('Server Running Sucessfully ');
   });
 
 const port=process.env.PORT
 
 app.listen(port ||3000,()=>{
-    console.log("server running in port ",port)
+    console.log("Port: ",port)
 })
 }
 catch (err)

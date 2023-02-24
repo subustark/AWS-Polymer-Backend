@@ -19,11 +19,8 @@ router.get("/",async(req,res)=>{
 
         if(key === "stargazers_count" || key ==="forks_count" || key ==="watchers_count" ||  key ==="open_issues_count" )
         {
-            // console.log("stars")
             values= req.query[key].split("-")
-            // console.log(values)
             values=values.map(a=>  parseInt(a))
-            // console.log(values,values[0],values[1])
             query['$and'].push({[key]:{$lt:values[1],$gte:values[0]}})
         }
         else if(key === "license")
