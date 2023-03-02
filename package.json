@@ -8,7 +8,7 @@
     "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "Mayuresan",
+  "author": "GUNAL",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
