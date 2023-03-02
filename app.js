@@ -18,7 +18,7 @@ try{
    app.use("/tags",tagsRoutes)
 
    app.get('/', function(req, res, next) {
-    res.send('Server Running Sucessfully ');
+    res.send('Server running successfully. The API endpoints are /repo,/tags');
   });
 
 const port=process.env.PORT
