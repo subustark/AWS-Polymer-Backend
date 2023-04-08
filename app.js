@@ -18,7 +18,7 @@ const tagsRoutes = require("./Routes/tags.routes");
     app.use("/tags", tagsRoutes);
 
     app.get("/", function (req, res, next) {
-      res.send("Server Runs Perfectly. The API endpoints are /repo,/tags");
+      res.send("Server running perfectly. The API endpoints are /repo,/tags");
     });
 
     const port = process.env.PORT;
